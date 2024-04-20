@@ -3362,4 +3362,95 @@ body main.dark {
   body main .container #Historial {
     height: 50%;
   }
+}
+body main .container #calculadora #CalculadoraEstandar {
+  position: relative;
+  overflow: hidden;
+}
+body main .container #calculadora #CalculadoraEstandar .m {
+  width: 100%;
+  border-radius: 5%;
+  height: 100%;
+  max-height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: max-height 0.4s ease-in-out;
+}
+body main .container #calculadora #CalculadoraEstandar .m .transparent {
+  background-color: rgba(0, 0, 0, 0.223);
+  height: 35%;
+  width: 100%;
+}
+body main .container #calculadora #CalculadoraEstandar .m #ClearMemoryC {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  background-color: rgb(0, 58, 92);
+}
+body main .container #calculadora #CalculadoraEstandar .m #ClearMemoryC #ClearMemory {
+  color: white;
+  background: transparent;
+  padding: 1rem;
+  cursor: pointer;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory {
+  width: 100%;
+  height: 55%;
+  background-color: rgb(0, 58, 92);
+  overflow: hidden;
+  color: white;
+  overflow-y: auto;
+  position: relative;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory #EmptyMemory {
+  color: white;
+  padding: 1rem;
+  width: 90%;
+  display: block;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory .data {
+  background: transparent;
+  text-align: right;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory .data:hover {
+  background-color: rgb(85, 85, 85);
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemory {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1rem;
+  visibility: hidden;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemory .btn {
+  width: 2rem;
+  margin-top: 0.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemory .btn:hover {
+  background-color: white;
+  color: #15173c;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory::-webkit-scrollbar {
+  width: 5px;
+}
+body main .container #calculadora #CalculadoraEstandar .m .Memory::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgb(0, 208, 255));
+  border-radius: 16px;
 }/*# sourceMappingURL=Styles.css.map */
