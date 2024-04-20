@@ -16,7 +16,7 @@ export function History() {
   let resultadoObtenido = false;
 
   history.addEventListener("click", () => {
-    if (window.matchMedia("(max-width: 427px)").matches) {
+    if (window.matchMedia("(max-width: 426px)").matches) {
       if (scream.style.maxWidth === "0px" || !scream.style.maxWidth) {
         scream.style.maxWidth = "100%";
       } else {
