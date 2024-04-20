@@ -1,0 +1,415 @@
+@use "GeneralStyles" as Variables;
+
+@mixin header(
+  $heightV,
+  $fontsize,
+  $fontsizeW,
+  $swicthWidth,
+  $widthLogo,
+  $WidthSubmenu
+) {
+  body {
+    main {
+      height: $heightV;
+      .header {
+        background-color: Variables.$body-color;
+        width: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        z-index: 1000;
+
+        .logo {
+          position: relative;
+          display: flex;
+          width: $widthLogo;
+
+          a {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        #Hcontainer {
+          display: flex;
+          padding: 0 1rem;
+          gap: 1rem;
+
+          .wrap-toggle {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            padding: 0 1rem;
+            font-size: $fontsizeW;
+            color: white;
+
+            #toggle {
+              display: none;
+            }
+
+            #toggle:checked + #swicth::after {
+              transform: translateX(50px);
+            }
+
+            #toggle:checked + #swicth {
+              background-color: rgb(0, 166, 255);
+            }
+
+            #swicth {
+              display: flex;
+              align-items: center;
+              position: relative;
+              width: $swicthWidth;
+              height: 30px;
+              background-color: gray;
+              border-radius: 50px;
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+
+              &::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+                background-color: white;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+
+          #headernavbar {
+            width: 100%;
+            #navbar {
+              #nav-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .option {
+                  display: flex;
+                  gap: 1rem;
+                  list-style-type: none;
+
+                 > button, .typeC {
+                    background: transparent;
+                    color: white;
+                    font-size: $fontsize;
+                    border: none;
+                    border-radius: 25px;  
+                    transition: all 0.3s ease-in-out;
+
+                    > span {
+                      display: flex;
+                      align-items: center;
+                      gap: 0.5rem;
+                      padding: 1REM;
+                    }
+
+                    &:hover {
+                      background-color: Variables.$hover-color-buttom;
+                      color: Variables.$body-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          #menu {
+            display: none;
+            background-color: transparent;
+            color: white;
+            transition: all 0.2s ease-in-out;
+            border-radius: 5px;
+
+            i {
+              font-size: 2rem;
+              vertical-align: middle;
+            }
+
+            &:hover {
+              background-color: white;
+              color: Variables.$body-color;
+            }
+
+            &.active {
+              background-color: white;
+              color: Variables.$body-color;
+            }
+          }
+        }
+
+        ul {
+          list-style-type: none;
+          border-radius: 0 0 5% 5%;
+          gap: 1rem;
+          user-select: none;
+
+          li {
+            position: relative;
+
+            > span {
+              font-size: $fontsize;
+
+            }
+
+            button {
+              color: white;
+              background: transparent;
+              width: 100%;
+              text-align: left;
+              font-size: $fontsize;
+              border: none;
+              display: block;
+              padding: 1rem;
+              transition: all 0.2s ease-in-out;
+            }
+
+            &.active {
+              transition: all 0.2s ease-in-out;
+              background-color: Variables.$body-color;
+              > button {
+                color: Variables.$body-color;
+              }
+            }
+          }
+
+          ul {
+            width: $WidthSubmenu;
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            max-height: 0;
+            transition: max-height 0.4s ease-in-out;
+
+            .opt {
+              background-color: Variables.$body-color-light;
+              color: white;
+              border-radius: 0 0 20px 20px;
+              user-select: none;
+
+              > div {
+                padding: 0.5rem 1rem;
+              }
+
+              hr {
+                border: solid white 1px;
+                border-start-end-radius: 50px;
+              }
+
+              li {
+                button {
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+
+                  span {
+                    font-size: $fontsize;
+                    padding: 0 0.5rem;
+                  }
+                }
+
+                &.active,
+                :hover {
+                  transition: all 0.2s ease-in-out;
+                  background-color: whitesmoke;
+                  color: Variables.$body-color;
+                }
+
+                &:last-child {
+                  &.active,
+                  :hover {
+                    border-radius: 0 0 20px 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  @include header(82.2vh, 1.8rem, 2rem, 80px, 19rem, 20rem);
+}
+
+@media (max-width: 1440px) {
+  @include header(83.2vh, 1.15rem, 1.15rem, 80px, 14rem, 13rem);
+}
+
+@media (max-width: 1367px) {
+  @include header(80.5vh, 1.15rem, 1.15rem, 80px, 14rem, 13rem);
+}
+
+@media (max-width: 1280px) {
+  @include header(84.2vh, 1.2rem, 1.2rem, 80px, 14rem, 14rem);
+}
+
+@media (max-width: 1025px) {
+  @include header(88.4vh, 1rem, 1rem, 80px, 10rem, 12rem);
+}
+
+@media (max-width: 769px) {
+  @include header(88.4vh, 1rem, 1rem, 80px, 10rem, 100%);
+
+  body {
+    main {
+      .header {
+        padding: 1rem 0.5rem;
+        #Hcontainer {
+          #headernavbar {
+            background-color: Variables.$body-color;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 0;
+            overflow-y: hidden;
+            transition: max-height 1s ease-in-out;
+
+            #navbar {
+              #nav-container {
+                .option {
+                  width: 100%;
+                  display: block;
+
+                  button {
+                    width: 100%;
+                    border-radius: 0px;
+                  }
+
+                  .typeC {
+                    width: 100%;
+                    border-radius: 0px;
+                  }
+                }
+              }
+            }
+          }
+
+          ul {
+            border-radius: 0;
+            li {
+              ul {
+                position: static;
+                width: 100%;
+
+                .opt{
+                  width: 100%;
+                  border-radius: 0px;
+                }
+
+                li {
+                  width: 100%;
+                }
+              }
+
+              &.active {
+                border-radius: 0;
+              }
+            }
+          }
+
+          #menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  @include header(91vh, 1rem, 1rem, 60px, 10rem, 100%);
+  body {
+    main {
+      .header {
+        padding: 1rem 0.5rem;
+        #Hcontainer {
+
+          .wrap-toggle {
+            #toggle:checked + #swicth::after {
+              transform: translateX(30px);
+            }
+          }
+
+
+          #headernavbar {
+            background-color: Variables.$body-color;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 0;
+            overflow-y: hidden;
+            transition: max-height 1s ease-in-out;
+
+            #navbar {
+              #nav-container {
+                .option {
+                  width: 100%;
+                  display: block;
+
+                  button {
+                    width: 100%;
+                    border-radius: 0px;
+                  }
+
+                  .typeC {
+                    width: 100%;
+                    border-radius: 0px;
+                  }
+                }
+              }
+            }
+          }
+
+          ul {
+            border-radius: 0;
+            li {
+              ul {
+                position: static;
+                width: 100%;
+
+                .opt{
+                  width: 100%;
+                  border-radius: 0px;
+                }
+
+                li {
+                  width: 100%;
+                }
+              }
+
+              &.active {
+                border-radius: 0;
+              }
+            }
+          }
+
+          #menu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+}
