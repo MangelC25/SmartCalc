@@ -1,0 +1,113 @@
+
+
+
+body {
+  main {
+    .container {
+      #calculadora {
+        #CalculadoraEstandar {
+          position: relative;
+          overflow: hidden;
+
+          .m {
+            width: 100%;
+            border-radius: 5%;
+            height: 100%;
+            max-height: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            user-select: none;
+            transition: max-height 0.4s ease-in-out;
+
+            .transparent {
+              background-color: rgba(0, 0, 0, 0.223);
+              height: 35%;
+              width: 100%;
+            }             
+            
+            #ClearMemoryC {
+              height: 10%;
+                width: 100%;
+                display: flex;
+                justify-content: right;
+                background-color: rgb(0, 58, 92);
+
+                #ClearMemory {
+                  color: white;
+                  background: transparent;
+                  padding: 1rem;
+                  cursor: pointer;
+                }
+              }
+
+            .Memory {
+              width: 100%;
+              height: 55%;
+              background-color: rgb(0, 58, 92);
+              overflow: hidden;
+              color: white;
+              overflow-y: auto;
+              position: relative;
+
+              #EmptyMemory {
+                color: white;
+                padding: 1rem;
+                width: 90%;
+                display: block;
+              }
+
+              .data {
+                background: transparent;
+                text-align: right;
+                padding: 1rem;
+                transition: all 0.3s ease-in-out;
+                font-family: "Courier New", Courier, monospace;
+                overflow: hidden;
+
+                &:hover {
+                  background-color: rgb(85, 85, 85);
+                }
+
+                #btnmemory {
+                  display: flex;
+                  align-items: center;
+                  justify-content: right;
+                  gap: 1rem;
+                  visibility: hidden;
+
+                  .btn {
+                    width: 2rem;
+                    margin-top: 0.5rem;
+                    height: 1.5rem;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    color: white;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+                    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+
+                    &:hover {
+                      background-color: white;
+                      color: #15173c;
+                    }
+                  }
+                }
+              }
+
+              &::-webkit-scrollbar {
+                width: 5px;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background: linear-gradient(transparent, rgb(0, 208, 255));
+                border-radius: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
