@@ -315,7 +315,7 @@
 }
 
 @media (max-width: 375px){
-  @include MainContainer(70%, 5rem, 14rem, 1.1rem, 1rem, 23rem, 29rem, 1rem, 22px);
+  @include MainContainer(70%, 5rem, 15rem, 1.3rem, 1rem, 23rem, 29rem, 1rem, 22px);
 
   body {
     main {
