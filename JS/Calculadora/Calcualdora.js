@@ -4,6 +4,10 @@ export function calculadora() {
   let resultadoObtenido = false;
   let op = "";
   let datosmostrar;
+  let resultadoAnterior = ""; 
+
+
+
   btn.forEach((boton) => {
     boton.addEventListener("click", async () => {
       datosmostrar = boton.textContent;
@@ -131,12 +135,19 @@ export function calculadora() {
         try {
           op = eval(pantalla.textContent);
           pantalla.textContent = op;
+          resultadoAnterior = op; 
           resultadoObtenido = true;
           return;
         } catch (error) {
           pantalla.textContent = "Error!";
           return;
         }
+      }
+
+      if (["+","-","*","/"].includes(boton.id) && resultadoAnterior !== "") {
+        pantalla.textContent = resultadoAnterior + datosmostrar;
+        resultadoObtenido = false; 
+        return;// Restablecer resultadoObtenido a false después de concatenar con el resultado anterior
       }
 
       if (pantalla.textContent === "0" || pantalla.textContent === "Error!") {
@@ -147,6 +158,7 @@ export function calculadora() {
 
       if (resultadoObtenido) {
         pantalla.textContent = datosmostrar;
+        resultadoAnterior = "";
         resultadoObtenido = false; // Restablecer resultadoObtenido a false después de reiniciar la pantalla
       }
 

@@ -12,6 +12,7 @@ export function History() {
   let tipoOperacion = "";
   let resultadoOperacion = "";
   let contador = 2;
+  let resultadoAnterior = ""; 
 
   let resultadoObtenido = false;
 
@@ -120,12 +121,12 @@ export function History() {
             result = eval(operacion.textContent);
 
             resultadoOperacion = result;
+            resultadoAnterior = resultadoOperacion;
 
             operacion.innerHTML = operacionActual;
             resultado.textContent = resultadoOperacion;
             agregarDivHistorial(operacionActual, resultado.textContent);
             operacionActual = "";
-            resultadoOperacion = "";
             operacion.textContent = "--";
             resultado.textContent = "--";
             tipoOperacion = "";
@@ -198,6 +199,7 @@ export function History() {
         let opC;
         let result;
 
+        
         if (resultadoOperacion === "") {
           valor = parseFloat(operacion.textContent);
         } else {
@@ -257,12 +259,23 @@ export function History() {
         }
       }
 
+      if (["+","-","*","/"].includes(boton.id) && resultadoAnterior !== "") {
+        operacionActual = resultadoAnterior + datosmostrar;
+        resultadoObtenido = false; 
+      } else{
+        resultadoAnterior = "";
+        resultadoObtenido = true; 
+      }
+
       operacion.innerHTML = operacionActual;
       await Mm();
     });
 
     if (resultadoObtenido) {
       operacion.textContent = datosmostrar;
+      resultadoAnterior = "";
+      operacionActual = "";
+      resultadoOperacion = "";
       resultadoObtenido = false;
     }
   });
