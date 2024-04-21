@@ -182,7 +182,7 @@
             #H {
               overflow: hidden;
               height: $heigthHistory;
-              overflow-y: auto;
+              overflow-y: scroll;
               padding: 0 0.5rem;
 
               .info {
@@ -273,7 +273,7 @@
 }
 
 @media (max-width: 425px) {
-  @include MainContainer(75%, 5.5rem, 18rem, 2rem, 1.3rem, 25rem, 7.5rem, 1rem, 30px);
+  @include MainContainer(75%, 5.5rem, 18rem, 2rem, 1.3rem, 25rem, 14rem, 1rem, 30px);
 
   body {
     main {
@@ -294,7 +294,7 @@
 }
 
 @media (max-width: 391px) {
-  @include MainContainer(73%, 5rem, 16rem, 1.8rem, 1.2rem, 23rem, 29rem, 1rem, 22px);
+  @include MainContainer(73%, 5rem, 16rem, 1.8rem, 1.3rem, 23rem, 12rem, 1rem, 22px);
 
   body {
     main {
@@ -315,7 +315,28 @@
 }
 
 @media (max-width: 375px){
-  @include MainContainer(70%, 5rem, 15rem, 1.3rem, 1rem, 23rem, 29rem, 1rem, 22px);
+  @include MainContainer(70%, 5rem, 14rem, 1.1rem, 1.3rem, 23rem, 8.5rem, 1rem, 22px);
+
+  body {
+    main {
+      .container {
+        flex-direction: column;
+
+        #calculadora {
+          padding: 0;
+          height: 80%;
+        }
+        
+        #Historial {
+          height: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px){
+  @include MainContainer(70%, 5rem, 16rem, 1.1rem, 1.3rem, 23rem, 8.5rem, 1rem, 22px);
 
   body {
     main {

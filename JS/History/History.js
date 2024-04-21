@@ -82,7 +82,7 @@ export function History() {
     boton.addEventListener("click", async () => {
       let datosmostrar = boton.textContent;
 
-      const ultimoCaracterEsOperador = "+-*/".includes(pantalla.textContent.slice(-1));
+      const ultimoCaracterEsOperador = "+-*/".includes(operacion.textContent.slice(-1));
 
       // Si el botón presionado es un operador y el último carácter también lo es, no hacer nada
       if (["+","-","*","/"].includes(boton.id) && ultimoCaracterEsOperador) {
