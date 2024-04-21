@@ -12,6 +12,13 @@ export function calculadora() {
     boton.addEventListener("click", async () => {
       datosmostrar = boton.textContent;
 
+      const ultimoCaracterEsOperador = "+-*/".includes(pantalla.textContent.slice(-1));
+
+      // Si el botón presionado es un operador y el último carácter también lo es, no hacer nada
+      if (["+","-","*","/"].includes(boton.id) && ultimoCaracterEsOperador) {
+        return;
+      }
+
       async function M() {
         const contenedor = document.querySelector(".Memory .data #btnmemory");
 
