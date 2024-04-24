@@ -1,7 +1,8 @@
-export function calculadora() {
-  const estandarC = document.querySelector("#CalculadoraEstandar");
-  const btn = estandarC.querySelectorAll(".func .btn");
-  const pantalla = estandarC.querySelector(".pantalla");
+export function cientifica() {
+
+  const cientificaC = document.querySelector("#CalculadoraCientifica");
+  const btn = cientificaC.querySelectorAll(".func .btn");
+  const pantalla = cientificaC.querySelector(".pantalla");
   let resultadoObtenido = false;
   let op = "";
   let datosmostrar;
@@ -191,4 +192,4 @@ export function calculadora() {
   document.getElementById("subtractMemory").addEventListener("click", () => {
     resultadoObtenido = true;
   });
-}
+  }

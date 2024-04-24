@@ -1513,8 +1513,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -1523,7 +1522,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -1537,13 +1536,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 115%;
     width: auto;
     height: 2rem;
@@ -1557,31 +1556,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 115%;
     width: auto;
     margin-top: 0.5rem;
@@ -1596,27 +1595,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 115%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -1717,8 +1723,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -1727,7 +1732,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -1741,13 +1746,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 85%;
     width: auto;
     height: 2rem;
@@ -1761,31 +1766,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 85%;
     width: auto;
     margin-top: 0.5rem;
@@ -1800,27 +1805,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 85%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -1921,8 +1933,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -1931,7 +1942,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -1945,13 +1956,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 85%;
     width: auto;
     height: 2rem;
@@ -1965,31 +1976,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 85%;
     width: auto;
     margin-top: 0.5rem;
@@ -2004,27 +2015,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 85%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2125,8 +2143,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -2135,7 +2152,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -2149,13 +2166,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 95%;
     width: auto;
     height: 2rem;
@@ -2169,31 +2186,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 95%;
     width: auto;
     margin-top: 0.5rem;
@@ -2208,27 +2225,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 95%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2329,8 +2353,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -2339,7 +2362,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -2353,13 +2376,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 75%;
     width: auto;
     height: 2rem;
@@ -2373,31 +2396,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 75%;
     width: auto;
     margin-top: 0.5rem;
@@ -2412,27 +2435,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 75%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2533,8 +2563,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -2543,7 +2572,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -2557,13 +2586,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 75%;
     width: auto;
     height: 2rem;
@@ -2577,31 +2606,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 75%;
     width: auto;
     margin-top: 0.5rem;
@@ -2616,27 +2645,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 75%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2737,8 +2773,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -2747,7 +2782,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -2761,13 +2796,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 75%;
     width: auto;
     height: 2rem;
@@ -2781,31 +2816,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 75%;
     width: auto;
     margin-top: 0.5rem;
@@ -2820,27 +2855,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 75%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2951,8 +2993,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -2961,7 +3002,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -2975,13 +3016,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 73%;
     width: auto;
     height: 2rem;
@@ -2995,31 +3036,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 73%;
     width: auto;
     margin-top: 0.5rem;
@@ -3034,27 +3075,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 73%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -3165,8 +3213,7 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
@@ -3175,7 +3222,7 @@ body main.dark {
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -3189,13 +3236,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 70%;
     width: auto;
     height: 2rem;
@@ -3209,31 +3256,31 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 70%;
     width: auto;
     margin-top: 0.5rem;
@@ -3248,27 +3295,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 70%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -3379,17 +3433,16 @@ body main.dark {
     height: 100%;
     padding: 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar {
-    background-color: #252862;
+  body main .container #calculadora .Calcu {
     border: rgb(177, 177, 177) solid 5px;
     color: #15173c;
     padding: 1rem;
-    width: 15rem;
+    width: 13rem;
     border-radius: 1rem;
     gap: 0.5rem;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .pantalla {
+  body main .container #calculadora .Calcu .pantalla {
     border: rgb(0, 183, 255) solid 5px;
     background-color: white;
     border-radius: 1rem;
@@ -3403,13 +3456,13 @@ body main.dark {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  body main .container #calculadora #CalculadoraEstandar .M {
+  body main .container #calculadora .Calcu .M {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 0.5rem;
     gap: 0 0.5rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn {
+  body main .container #calculadora .Calcu .M .btn {
     font-size: 65%;
     width: auto;
     height: 2rem;
@@ -3423,35 +3476,35 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn span i {
+  body main .container #calculadora .Calcu .M .btn span i {
     font-size: 12px;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:hover {
+  body main .container #calculadora .Calcu .M .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled {
+  body main .container #calculadora .Calcu .M .btn:disabled {
     pointer-events: none; /* Deshabilita los eventos del mouse */
     opacity: 0.5; /* Cambia la opacidad para indicar visualmente que está deshabilitado */
   }
-  body main .container #calculadora #CalculadoraEstandar .M .btn:disabled:hover {
+  body main .container #calculadora .Calcu .M .btn:disabled:hover {
     cursor: not-allowed; /* Cambia el cursor en hover para indicar que no es interactivo */
   }
-  body main .container #calculadora #CalculadoraEstandar .M #memoria.active {
+  body main .container #calculadora .Calcu .M #memoria.active {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func {
+  body main .container #calculadora .Calcu .func {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn {
+  body main .container #calculadora .Calcu .func .btn {
     font-size: 65%;
     width: auto;
     margin-top: 0.5rem;
-    height: 0.8rem;
+    height: 0.9rem;
     border: none;
     border-radius: 10px;
     background-color: transparent;
@@ -3462,27 +3515,34 @@ body main.dark {
     transition: all 0.2s ease-in-out;
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn i {
+  body main .container #calculadora .Calcu .func .btn i {
     font-size: 65%;
     vertical-align: middle;
   }
-  body main .container #calculadora #CalculadoraEstandar .func .btn:hover {
+  body main .container #calculadora .Calcu .func .btn:hover {
     background-color: white;
     color: #15173c;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar {
+  body main .container #calculadora .Calcu .func #borrar {
     background-color: rgba(255, 0, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #borrar:hover {
+  body main .container #calculadora .Calcu .func #borrar:hover {
     background-color: rgb(203, 3, 3);
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual {
+  body main .container #calculadora .Calcu .func #igual {
     background-color: rgba(153, 255, 0, 0.579);
     color: white;
   }
-  body main .container #calculadora #CalculadoraEstandar .func #igual:hover {
+  body main .container #calculadora .Calcu .func #igual:hover {
     background-color: rgb(123, 203, 3);
+  }
+  body main .container #calculadora #CalculadoraEstandar {
+    background-color: #3898a6;
+  }
+  body main .container #calculadora #CalculadoraCientifica {
+    background-color: #65866b;
+    display: none;
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -3579,11 +3639,11 @@ body main.dark {
     height: 65%;
   }
 }
-body main .container #calculadora #CalculadoraEstandar {
+body main .container #calculadora .Calcu {
   position: relative;
   overflow: hidden;
 }
-body main .container #calculadora #CalculadoraEstandar .m {
+body main .container #calculadora .Calcu .m {
   width: 100%;
   border-radius: 5%;
   height: 100%;
@@ -3596,25 +3656,25 @@ body main .container #calculadora #CalculadoraEstandar .m {
           user-select: none;
   transition: max-height 0.4s ease-in-out;
 }
-body main .container #calculadora #CalculadoraEstandar .m .transparent {
+body main .container #calculadora .Calcu .m .transparent {
   background-color: rgba(0, 0, 0, 0.223);
   height: 35%;
   width: 100%;
 }
-body main .container #calculadora #CalculadoraEstandar .m #ClearMemoryC {
+body main .container #calculadora .Calcu .m #ClearMemoryC {
   height: 10%;
   width: 100%;
   display: flex;
   justify-content: right;
   background-color: rgb(0, 58, 92);
 }
-body main .container #calculadora #CalculadoraEstandar .m #ClearMemoryC #ClearMemory {
+body main .container #calculadora .Calcu .m #ClearMemoryC #ClearMemory {
   color: white;
   background: transparent;
   padding: 1rem;
   cursor: pointer;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory {
+body main .container #calculadora .Calcu .m .Memory {
   width: 100%;
   height: 55%;
   background-color: rgb(0, 58, 92);
@@ -3623,13 +3683,13 @@ body main .container #calculadora #CalculadoraEstandar .m .Memory {
   overflow-y: auto;
   position: relative;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory #EmptyMemory {
+body main .container #calculadora .Calcu .m .Memory #EmptyMemory {
   color: white;
   padding: 1rem;
   width: 90%;
   display: block;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory .data {
+body main .container #calculadora .Calcu .m .Memory .data {
   background: transparent;
   text-align: right;
   padding: 1rem;
@@ -3637,17 +3697,17 @@ body main .container #calculadora #CalculadoraEstandar .m .Memory .data {
   font-family: "Courier New", Courier, monospace;
   overflow: hidden;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory .data:hover {
+body main .container #calculadora .Calcu .m .Memory .data:hover {
   background-color: rgb(85, 85, 85);
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemory {
+body main .container #calculadora .Calcu .m .Memory .data #btnmemory {
   display: flex;
   align-items: center;
   justify-content: right;
   gap: 1rem;
   visibility: hidden;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemory .btn {
+body main .container #calculadora .Calcu .m .Memory .data #btnmemory .btn {
   width: 2rem;
   margin-top: 0.5rem;
   height: 1.5rem;
@@ -3659,14 +3719,14 @@ body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemo
   cursor: pointer;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory .data #btnmemory .btn:hover {
+body main .container #calculadora .Calcu .m .Memory .data #btnmemory .btn:hover {
   background-color: white;
   color: #15173c;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory::-webkit-scrollbar {
+body main .container #calculadora .Calcu .m .Memory::-webkit-scrollbar {
   width: 5px;
 }
-body main .container #calculadora #CalculadoraEstandar .m .Memory::-webkit-scrollbar-thumb {
+body main .container #calculadora .Calcu .m .Memory::-webkit-scrollbar-thumb {
   background: linear-gradient(transparent, rgb(0, 208, 255));
   border-radius: 16px;
 }/*# sourceMappingURL=Styles.css.map */

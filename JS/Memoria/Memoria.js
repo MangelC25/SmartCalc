@@ -76,11 +76,15 @@ function limpiarMemoria() {
 }
 
 export function Memory() {
+
   btn.forEach((boton) => {
     boton.disabled = true;
     btn[4].disabled = false;
     btn[2].disabled = false;
     btn[3].disabled = false;
+    btn[8].disabled = false;
+    btn[9].disabled = false;
+    btn[10].disabled = false;
 
     boton.addEventListener("click", () => {
       if (boton.id === "memoria") {
@@ -101,6 +105,9 @@ export function Memory() {
         btn[5].disabled = false;
         btn[0].disabled = false;
         btn[1].disabled = false;
+        btn[10].disabled = false;
+        btn[6].disabled = false;
+        btn[7].disabled = false;
         P.style.display = "none";
         clearMemory.style.display = "block";
         data = parseFloat(pantalla.textContent);
@@ -110,6 +117,9 @@ export function Memory() {
         btn[5].disabled = true;
         btn[0].disabled = true;
         btn[1].disabled = true;
+        btn[10].disabled = true;
+        btn[6].disabled = true;
+        btn[7].disabled = true;
         limpiarMemoria();
         data = "";
         return;
@@ -130,11 +140,15 @@ export function Memory() {
       }
     });
   });
+  
 
   clearMemory.addEventListener("click", () => {
     btn[5].disabled = true;
     btn[0].disabled = true;
     btn[1].disabled = true;
+    btn[10].disabled = true;
+    btn[6].disabled = true;
+    btn[7].disabled = true;
     limpiarMemoria();
     data = "";
     return;

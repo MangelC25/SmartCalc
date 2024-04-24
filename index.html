@@ -46,19 +46,19 @@
                                             </div>
 
                                             <hr>
-                                            <li class="active"><button type="button"><i
+                                            <li class="active"><button class="btn" type="button" id="Estandar"><i
                                                         class='bx bxs-calculator'></i><span>Estandar</span></button>
                                             </li>
-                                            <li><button type="button"><i
+                                            <li><button class="btn" type="button" id="Cientifica"><i
                                                         class='bx bxs-flask'></i><span>Cientifica</span></button>
                                             </li>
-                                            <li><button type="button"><i
+                                            <li><button class="btn" type="button"><i
                                                         class='bx bx-line-chart'></i><span>Grafica</span></button>
                                             </li>
-                                            <li><button type="button"><i
+                                            <li><button class="btn" type="button"><i
                                                         class='bx bx-code'></i><span>Programador</span></button>
                                             </li>
-                                            <li><button type="button"><i class='bx bxs-calendar'></i><span>Calculo de
+                                            <li><button class="btn" type="button"><i class='bx bxs-calendar'></i><span>Calculo de
                                                         fecha</span></button></li>
                                         </div>
                                     </ul>
@@ -149,6 +149,55 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="CalculadoraCientifica" class="Calcu">
+                    <div class="pantalla">0</div>
+                    <div class="M">
+                        <button class="btn" id="clearMemory"><span>MC</span></button>
+                        <button class="btn" id="recoverMemory"><span>MR</span></button>
+                        <button class="btn" id="AddMemory"><span>M+</span></button>
+                        <button class="btn" id="subtractMemory"><span>M-</span></button>
+                        <button class="btn" id="StoreMemory"><span>MS</span></button>
+                        <button class="btn" id="memoria"><span>M <i class='bx bxs-chevron-down'></i></span></button>
+                    </div>
+                    <div class="func">
+                        <button id="%" class="btn"><span>%</span></button>
+                        <button id="CE" class="btn"><span>CE</span></button>
+                        <button id="C" class="btn"><span>C</span></button>
+                        <button id="borrar" class="btn"><span><i class='bx bxs-tag-x'></i></span></button>
+                        <button id="1/x" class="btn"><span><sup>1</sup>/<sub>X</sub></span></button>
+                        <button id="cuadrado" class="btn"><span>X<sup>2</sup></span></button>
+                        <button id="raiz" class="btn"><span><sup>2</sup>&radic;X</span></button>
+                        <button class="btn" id="/"><span>/</span></button>
+                        <button class="btn"><span>7</span></button>
+                        <button class="btn"><span>8</span></button>
+                        <button class="btn"><span>9</span></button>
+                        <button class="btn" id="*"><span>*</span></button>
+                        <button class="btn"><span>4</span></button>
+                        <button class="btn"><span>5</span></button>
+                        <button class="btn"><span>6</span></button>
+                        <button class="btn" id="+"><span>+</span></button>
+                        <button class="btn"><span>1</span></button>
+                        <button class="btn"><span>2</span></button>
+                        <button class="btn"><span>3</span></button>
+                        <button class="btn" id="-"><span>-</span></button>
+                        <button id="+/-" class="btn"><span><sup>+</sup>/<sub>-</sub></span></button>
+                        <button class="btn"><span>0</span></button>
+                        <button class="btn"><span>.</span></button>
+                        <button id="igual" class="btn"><span>=</span></button>
+                    </div>
+                    <div class="m">
+                        <div class="transparent C">
+                        </div>
+                        <div class="Memory">
+                            <p id="EmptyMemory">No hay ningun dato almacenado en memoria</p>
+                        </div>
+                        <div id="ClearMemoryC">
+                            <button id="ClearMemory"><i class='bx bx-trash'></i></button>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div id="Historial">
                 <div class="infoH">
