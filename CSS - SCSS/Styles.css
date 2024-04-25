@@ -1577,7 +1577,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -1620,9 +1619,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -1787,7 +1792,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -1830,9 +1834,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -1997,7 +2007,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -2040,9 +2049,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2207,7 +2222,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -2250,9 +2264,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2417,7 +2437,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -2460,9 +2479,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2627,7 +2652,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -2670,9 +2694,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -2837,7 +2867,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -2880,9 +2909,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -3057,7 +3092,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -3100,9 +3134,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -3277,7 +3317,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -3320,9 +3359,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));
@@ -3497,7 +3542,6 @@ body main.dark {
   }
   body main .container #calculadora .Calcu .func {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0 1rem;
   }
   body main .container #calculadora .Calcu .func .btn {
@@ -3540,9 +3584,15 @@ body main.dark {
   body main .container #calculadora #CalculadoraEstandar {
     background-color: #3898a6;
   }
+  body main .container #calculadora #CalculadoraEstandar .func {
+    grid-template-columns: repeat(4, 1fr);
+  }
   body main .container #calculadora #CalculadoraCientifica {
     background-color: #65866b;
     display: none;
+  }
+  body main .container #calculadora #CalculadoraCientifica .func {
+    grid-template-columns: repeat(5, 1fr);
   }
   body main .container #Historial {
     background: linear-gradient(to left, rgb(160, 160, 160), rgb(88, 88, 88));

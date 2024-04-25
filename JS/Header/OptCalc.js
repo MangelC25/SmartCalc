@@ -5,6 +5,9 @@ export function OptCalc() {
   const cientificaC = document.querySelector("#CalculadoraCientifica");
 
   btn.forEach((boton) => {
+    
+    const liPadre = boton.parentElement; // El li que contiene el botón clickeado
+    
     boton.addEventListener("click", () => {
       // Remover la clase "active" de todos los elementos li
       li.forEach((lista) => {
@@ -20,7 +23,7 @@ export function OptCalc() {
       }
 
       // Agregar la clase "active" al elemento li correspondiente al botón clickeado
-      const liPadre = boton.parentElement; // El li que contiene el botón clickeado
+
       liPadre.classList.add("active");
     });
   });

@@ -102,7 +102,6 @@
 
             .func {
               display: grid;
-              grid-template-columns: repeat(4, 1fr);
               gap: 0 1rem;
 
               .btn {
@@ -151,11 +150,17 @@
             }
           }
 
-          #CalculadoraEstandar{
+          #CalculadoraEstandar {
+            .func {
+              grid-template-columns: repeat(4, 1fr);
+            }
             background-color: #3898a6;
           }
 
           #CalculadoraCientifica {
+            .func {
+              grid-template-columns: repeat(5, 1fr);
+            }
             background-color: #65866b;
             display: none;
           }

@@ -141,10 +141,15 @@ export function calculadora() {
 
       if (boton.id === "igual") {
         try {
-          op = eval(pantalla.textContent);
-          pantalla.textContent = op;
-          resultadoAnterior = op;
-          resultadoObtenido = true;
+          if (pantalla.textContent.includes("/0")) {
+            pantalla.textContent = "Error al dividir por cero!";
+            resultadoObtenido = true;
+          } else {
+            op = eval(pantalla.textContent);
+            pantalla.textContent = op;
+            resultadoAnterior = op;
+            resultadoObtenido = true;
+          }
           return;
         } catch (error) {
           pantalla.textContent = "Error!";

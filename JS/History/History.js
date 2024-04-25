@@ -12,7 +12,7 @@ export function History() {
   let tipoOperacion = "";
   let resultadoOperacion = "";
   let contador = 2;
-  let resultadoAnterior = ""; 
+  let resultadoAnterior = "";
 
   let resultadoObtenido = false;
 
@@ -82,10 +82,12 @@ export function History() {
     boton.addEventListener("click", async () => {
       let datosmostrar = boton.textContent;
 
-      const ultimoCaracterEsOperador = "+-*/".includes(operacion.textContent.slice(-1));
+      const ultimoCaracterEsOperador = "+-*/".includes(
+        operacion.textContent.slice(-1)
+      );
 
       // Si el botón presionado es un operador y el último carácter también lo es, no hacer nada
-      if (["+","-","*","/"].includes(boton.id) && ultimoCaracterEsOperador) {
+      if (["+", "-", "*", "/"].includes(boton.id) && ultimoCaracterEsOperador) {
         return;
       }
 
@@ -107,7 +109,8 @@ export function History() {
         } else if (
           tipoOperacion === "cuadrado" ||
           tipoOperacion === "raiz" ||
-          tipoOperacion === "inverso"
+          tipoOperacion === "inverso" ||
+          tipoOperacion === "pi"
         ) {
           try {
             operacion.innerHTML = operacionActual;
@@ -125,18 +128,28 @@ export function History() {
         } else {
           try {
             let result;
-            result = eval(operacion.textContent);
+            if (operacion.textContent.includes("/0")) {
+              result = "Error al dividir por cero!";
 
-            resultadoOperacion = result;
-            resultadoAnterior = resultadoOperacion;
-
-            operacion.innerHTML = operacionActual;
-            resultado.textContent = resultadoOperacion;
-            agregarDivHistorial(operacionActual, resultado.textContent);
-            operacionActual = "";
-            operacion.textContent = "--";
-            resultado.textContent = "--";
-            tipoOperacion = "";
+              resultadoOperacion = result;
+              resultadoAnterior = resultadoOperacion;
+  
+              operacion.innerHTML = operacionActual;
+              resultado.textContent = resultadoOperacion;
+              return;
+            } else {
+              result = eval(operacion.textContent);
+              resultadoOperacion = result;
+              resultadoAnterior = resultadoOperacion;
+  
+              operacion.innerHTML = operacionActual;
+              resultado.textContent = resultadoOperacion;
+              agregarDivHistorial(operacionActual, resultado.textContent);
+              operacionActual = "";
+              operacion.textContent = "--";
+              resultado.textContent = "--";
+              tipoOperacion = "";
+            }
             return;
           } catch (error) {
             resultado.textContent = "Error!";
@@ -206,7 +219,6 @@ export function History() {
         let opC;
         let result;
 
-        
         if (resultadoOperacion === "") {
           valor = parseFloat(operacion.textContent);
         } else {
@@ -246,6 +258,31 @@ export function History() {
         operacionActual = opR;
         resultadoOperacion = result;
         contador = 2;
+      } else if (boton.id === "pi") {
+        let valor;
+        let opP;
+        let result;
+
+        if (resultadoOperacion === "") {
+          valor = parseFloat(operacion.textContent);
+        } else {
+          valor = parseFloat(resultadoOperacion);
+        }
+
+        if (operacionActual === "") {
+          opP = `&pi;`;
+          result = Math.PI;
+        } else {
+          result = valor * Math.PI;
+          opP = `${valor}&pi;`;
+        }
+
+        operacion.innerHTML = opP;
+        resultado.textContent = result;
+        operacionActual = opP;
+        resultadoOperacion = result;
+        tipoOperacion = "pi";
+        contador = 2;
       } else if (boton.id === "+/-") {
         if (operacionActual !== "" && !isNaN(operacionActual.slice(-1))) {
           const ultimoNumero = operacionActual.match(/-?\d*\.?\d*$/)[0];
@@ -261,17 +298,18 @@ export function History() {
         if (resultado.textContent !== "--") {
           operacionActual = datosmostrar;
           resultado.textContent = "--";
+          resultadoOperacion = "";
         } else {
           operacionActual += datosmostrar;
         }
       }
 
-      if (["+","-","*","/"].includes(boton.id) && resultadoAnterior !== "") {
+      if (["+", "-", "*", "/"].includes(boton.id) && resultadoAnterior !== "") {
         operacionActual = resultadoAnterior + datosmostrar;
-        resultadoObtenido = false; 
-      } else{
+        resultadoObtenido = false;
+      } else {
         resultadoAnterior = "";
-        resultadoObtenido = true; 
+        resultadoObtenido = true;
       }
 
       operacion.innerHTML = operacionActual;
@@ -335,5 +373,29 @@ export function History() {
     operacion.textContent = "--";
     resultado.textContent = "--";
     return;
+  });
+
+  const btnli = document.querySelectorAll(".btn");
+
+  btnli.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      if (boton.id === "Estandar") {
+        operacionActual = "";
+        resultadoOperacion = "";
+        operacion.textContent = "--";
+        resultado.textContent = "--";
+        tipoOperacion = "";
+        contador = 2;
+        resultadoAnterior = "";
+      } else if (boton.id === "Cientifica") {
+        operacionActual = "";
+        resultadoOperacion = "";
+        operacion.textContent = "--";
+        resultado.textContent = "--";
+        tipoOperacion = "";
+        contador = 2;
+        resultadoAnterior = "";
+      }
+    });
   });
 }

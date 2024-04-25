@@ -1,5 +1,4 @@
 export function cientifica() {
-
   const cientificaC = document.querySelector("#CalculadoraCientifica");
   const btn = cientificaC.querySelectorAll(".func .btn");
   const pantalla = cientificaC.querySelector(".pantalla");
@@ -35,18 +34,8 @@ export function cientifica() {
         }
       }
 
-      if (boton.id === "%") {
-        try {
-          if (resultadoObtenido) {
-            // Si ya se ha obtenido un resultado anteriormente
-            pantalla.textContent = parseFloat(pantalla.textContent) / 100;
-            resultadoObtenido = true; // Restablecer la variable resultadoObtenido a false después de dividir porcentaje
-          }
-          return;
-        } catch (error) {
-          pantalla.textContent = "Error!";
-          return;
-        }
+      if (boton.id === "pi") {
+
       }
 
       if (boton.id === "CE") {
@@ -172,6 +161,7 @@ export function cientifica() {
       }
 
       await M();
+      console.log();
     });
   });
 
@@ -192,4 +182,4 @@ export function cientifica() {
   document.getElementById("subtractMemory").addEventListener("click", () => {
     resultadoObtenido = true;
   });
-  }
+}
