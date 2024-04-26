@@ -268,13 +268,18 @@ export function History() {
         } else {
           valor = parseFloat(resultadoOperacion);
         }
-
+        
         if (operacionActual === "") {
           opP = `&pi;`;
           result = Math.PI;
         } else {
-          result = valor * Math.PI;
-          opP = `${valor}&pi;`;
+          if (/[\+\-\*\/]/.test(operacionActual)) {
+            opP = operacion.textContent + Math.PI;
+            result = eval(opP);
+          } else{
+            result = valor * Math.PI;
+            opP = `${valor}&pi;`;
+          }
         }
 
         operacion.innerHTML = opP;

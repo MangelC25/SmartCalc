@@ -35,7 +35,20 @@ export function cientifica() {
       }
 
       if (boton.id === "pi") {
-
+        if (/[\+\-\*\/]/.test(pantalla.textContent)) {
+          pantalla.textContent += Math.PI;
+        } else {
+          if (!isNaN(parseFloat(pantalla.textContent))) {
+            if (parseFloat(pantalla.textContent) !== 0) {
+              pantalla.textContent = parseFloat(pantalla.textContent) * Math.PI;
+              resultadoObtenido = true;
+            } else{
+              pantalla.textContent = Math.PI;
+              resultadoObtenido = true;
+            }
+          }
+        }
+        return;
       }
 
       if (boton.id === "CE") {
@@ -182,4 +195,5 @@ export function cientifica() {
   document.getElementById("subtractMemory").addEventListener("click", () => {
     resultadoObtenido = true;
   });
+  
 }
