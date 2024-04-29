@@ -110,7 +110,9 @@ export function History() {
           tipoOperacion === "cuadrado" ||
           tipoOperacion === "raiz" ||
           tipoOperacion === "inverso" ||
-          tipoOperacion === "pi"
+          tipoOperacion === "pi" ||
+          tipoOperacion === "e" ||
+          tipoOperacion === "absoluto"
         ) {
           try {
             operacion.innerHTML = operacionActual;
@@ -287,6 +289,56 @@ export function History() {
         operacionActual = opP;
         resultadoOperacion = result;
         tipoOperacion = "pi";
+        contador = 2;
+      } else if (boton.id === "e") {
+        let valor;
+        let opP;
+        let result;
+
+        if (resultadoOperacion === "") {
+          valor = parseFloat(operacion.textContent);
+        } else {
+          valor = parseFloat(resultadoOperacion);
+        }
+        
+        if (operacionActual === "") {
+          opP = `e`;
+          result = Math.E;
+        } else {
+          if (/[\+\-\*\/]/.test(operacionActual)) {
+            opP = operacion.textContent + Math.E;
+            result = eval(opP);
+          } else{
+            result = valor * Math.E;
+            opP = `${valor}e`;
+          }
+        }
+
+        operacion.innerHTML = opP;
+        resultado.textContent = result;
+        operacionActual = opP;
+        resultadoOperacion = result;
+        tipoOperacion = "e";
+        contador = 2;
+      } else if (boton.id === "absoluto") {
+        let valor;
+        let opB;
+        let result;
+
+        if (resultadoOperacion === "") {
+          valor = parseFloat(operacion.textContent);
+        } else {
+          valor = parseFloat(resultadoOperacion);
+        }
+
+        result = Math.abs(valor);
+        opB = `${valor}`;
+
+        operacion.innerHTML = opB;
+        resultado.textContent = result;
+        operacionActual = opB;
+        resultadoOperacion = result;
+        tipoOperacion = "absoluto";
         contador = 2;
       } else if (boton.id === "+/-") {
         if (operacionActual !== "" && !isNaN(operacionActual.slice(-1))) {

@@ -130,8 +130,30 @@ export function calculadora() {
 
       if (boton.id === "+/-") {
         try {
-          let numero = parseFloat(pantalla.textContent);
-          pantalla.textContent = -1 * numero;
+          if (/\d+[\+\-]\d+/.test(pantalla.textContent)) {
+            let operadores = pantalla.textContent.match(/[\+\-]/g); // Encuentra todos los operadores
+            let ultimoOperadorIndex = pantalla.textContent.lastIndexOf(
+              operadores[operadores.length - 1]
+            ); // Encuentra el índice del último operador
+            if (operadores[operadores.length - 1] === "+") {
+              pantalla.textContent =
+                pantalla.textContent.substring(0, ultimoOperadorIndex) +
+                "-" +
+                pantalla.textContent.substring(ultimoOperadorIndex + 1);
+            } else {
+              pantalla.textContent =
+                pantalla.textContent.substring(0, ultimoOperadorIndex) +
+                "+" +
+                pantalla.textContent.substring(ultimoOperadorIndex + 1);
+            }
+          } else if (/^\d/.test(pantalla.textContent)) {
+            pantalla.textContent = "-" + pantalla.textContent;
+          } else if (/^\-\d/.test(pantalla.textContent)) {
+            pantalla.textContent = pantalla.textContent.substring(1);
+          }
+
+          resultadoAnterior = pantalla.textContent;
+
           return;
         } catch (error) {
           pantalla.textContent = "Error!";
