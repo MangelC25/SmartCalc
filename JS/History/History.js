@@ -92,7 +92,83 @@ export function History() {
       }
 
       if (boton.id === "igual") {
-        if (tipoOperacion === "%") {
+        if (tipoOperacion === "exp") {
+          try {
+            // Verificar si ",e+" está presente en la pantalla
+            if (
+              operacionActual.includes(",e+") ||
+              operacionActual.includes(",e-")
+            ) {
+              // Obtener el último número antes de ",e+"
+              const ultimoNumero = operacion.textContent.match(
+                /(\d*\.?\d+)(?=,e[\+\-])/
+              );
+              let numero = parseFloat(ultimoNumero[0]);
+              let potencia = parseFloat(
+                operacion.textContent.match(/(\d+)$/)[0]
+              );
+
+              let resultado;
+
+              if (/([\+\-\*\/]\d*)(?=,e[\+\-])/.test(operacionActual)) {
+                let NotacionC;
+                let expresion = operacion.textContent.match(
+                  /[\d\+\-\*\/]+(?=\d+,e[\+\-])/g
+                );
+
+                let result;
+
+                if (/,e\+/.test(operacionActual)) {
+                  if (potencia === 0) {
+                    NotacionC = numero * Math.pow(10, 1);
+                  } else {
+                    NotacionC = numero * Math.pow(10, potencia);
+                  }
+                } else if (/,e\-/.test(operacionActual)) {
+                  if (potencia === 0) {
+                    NotacionC = numero * Math.pow(10, -1);
+                  } else {
+                    NotacionC = numero * Math.pow(10, -potencia);
+                  }
+                }
+
+                result = expresion + NotacionC;
+                resultado = eval(result);
+              } else if (ultimoNumero) {
+                if (/,e\+/.test(operacionActual)) {
+                  if (potencia === 0) {
+                    resultado = numero * Math.pow(10, 1);
+                  } else {
+                    resultado = numero * Math.pow(10, potencia);
+                  }
+                } else if (/,e\-/.test(operacionActual)) {
+                  if (potencia === 0) {
+                    resultado = numero * Math.pow(10, -1);
+                  } else {
+                    resultado = numero * Math.pow(10, -potencia);
+                  }
+                }
+              }
+
+              resultadoOperacion = resultado;
+              resultadoAnterior = resultado;
+              tipoOperacion = "";
+              resultadoObtenido = false;
+            }
+
+            operacion.innerHTML = operacionActual;
+            resultado.textContent = resultadoOperacion;
+            agregarDivHistorial(operacionActual, resultado.textContent);
+            operacionActual = "";
+            resultadoOperacion = "";
+            operacion.textContent = "--";
+            resultado.textContent = "--";
+            tipoOperacion = "";
+            return;
+          } catch (error) {
+            resultado.textContent = "Error!";
+          }
+        } else if (tipoOperacion === "%") {
           try {
             operacion.innerHTML = operacionActual;
             resultado.textContent = resultadoOperacion;
@@ -134,16 +210,16 @@ export function History() {
               result = "Error al dividir por cero!";
 
               resultadoOperacion = result;
-              resultadoAnterior = resultadoOperacion;
-  
+              resultadoAnterior = result;
+
               operacion.innerHTML = operacionActual;
               resultado.textContent = resultadoOperacion;
               return;
             } else {
               result = eval(operacion.textContent);
               resultadoOperacion = result;
-              resultadoAnterior = resultadoOperacion;
-  
+              resultadoAnterior = result;
+
               operacion.innerHTML = operacionActual;
               resultado.textContent = resultadoOperacion;
               agregarDivHistorial(operacionActual, resultado.textContent);
@@ -270,7 +346,7 @@ export function History() {
         } else {
           valor = parseFloat(resultadoOperacion);
         }
-        
+
         if (operacionActual === "") {
           opP = `&pi;`;
           result = Math.PI;
@@ -278,7 +354,7 @@ export function History() {
           if (/[\+\-\*\/]/.test(operacionActual)) {
             opP = operacion.textContent + Math.PI;
             result = eval(opP);
-          } else{
+          } else {
             result = valor * Math.PI;
             opP = `${valor}&pi;`;
           }
@@ -300,7 +376,7 @@ export function History() {
         } else {
           valor = parseFloat(resultadoOperacion);
         }
-        
+
         if (operacionActual === "") {
           opP = `e`;
           result = Math.E;
@@ -308,7 +384,7 @@ export function History() {
           if (/[\+\-\*\/]/.test(operacionActual)) {
             opP = operacion.textContent + Math.E;
             result = eval(opP);
-          } else{
+          } else {
             result = valor * Math.E;
             opP = `${valor}e`;
           }
@@ -341,18 +417,62 @@ export function History() {
         tipoOperacion = "absoluto";
         contador = 2;
       } else if (boton.id === "+/-") {
-        if (operacionActual !== "" && !isNaN(operacionActual.slice(-1))) {
-          const ultimoNumero = operacionActual.match(/-?\d*\.?\d*$/)[0];
-          const nuevoNumero = -parseFloat(ultimoNumero);
-          operacionActual = operacionActual.replace(
-            /-?\d*\.?\d*$/,
-            nuevoNumero
-          );
-        } else {
-          operacionActual = "-" + operacionActual;
+        try {
+          if (
+            operacion.textContent.includes(",e+") ||
+            operacion.textContent.includes(",e-")
+          ) {
+            if (/,e\+\d+/.test(operacion.textContent)) {
+              operacion.textContent = operacion.textContent.replace(
+                /,e\+/,
+                `,e-`
+              );
+            } else if (/,e\-\d+/.test(operacion.textContent)) {
+              operacion.textContent = operacion.textContent.replace(
+                /,e\-/,
+                `,e+`
+              );
+            }
+          } else {
+            if (/\d+[\+\-]\d+/.test(operacion.textContent)) {
+              let operadores = operacion.textContent.match(/[\+\-]/g); // Encuentra todos los operadores
+              let ultimoOperadorIndex = operacion.textContent.lastIndexOf(
+                operadores[operadores.length - 1]
+              ); // Encuentra el índice del último operador
+              if (operadores[operadores.length - 1] === "+") {
+                operacion.textContent =
+                  operacion.textContent.substring(0, ultimoOperadorIndex) +
+                  "-" +
+                  operacion.textContent.substring(ultimoOperadorIndex + 1);
+              } else {
+                operacion.textContent =
+                  operacion.textContent.substring(0, ultimoOperadorIndex) +
+                  "+" +
+                  operacion.textContent.substring(ultimoOperadorIndex + 1);
+              }
+            } else if (/^\d/.test(operacion.textContent)) {
+              operacion.textContent = "-" + operacion.textContent;
+            } else if (/^\-\d/.test(operacion.textContent)) {
+              operacion.textContent = operacion.textContent.substring(1);
+            }
+
+            resultadoAnterior = operacion.textContent;
+          }
+
+          return;
+        } catch (error) {
+          operacion.textContent = "Error!";
+          return;
+        }
+      } else if (boton.id === "exp") {
+        if (/\d+$/.test(operacionActual)) {
+          operacionActual += `,e+0`;
+          operacion.textContent = operacionActual;
+          tipoOperacion = "exp";
+          resultadoObtenido = false;
         }
       } else {
-        if (resultado.textContent !== "--") {
+        if (operacion.textContent === "--") {
           operacionActual = datosmostrar;
           resultado.textContent = "--";
           resultadoOperacion = "";

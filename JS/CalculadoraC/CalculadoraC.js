@@ -241,6 +241,8 @@ export function cientifica() {
                   /[\d\+\-\*\/]+(?=\d+,e[\+\-])/g
                 );
 
+                let result;
+
                 if (/,e\+/.test(pantalla.textContent)) {
                   if (potencia === 0) {
                     NotacionC = numero * Math.pow(10, 1);
@@ -255,7 +257,8 @@ export function cientifica() {
                   }
                 }
 
-                resultado = expresion + NotacionC;
+                result = expresion + NotacionC;
+                resultado = eval(result);
               } else if (ultimoNumero) {
                 if (/,e\+/.test(pantalla.textContent)) {
                   if (potencia === 0) {
